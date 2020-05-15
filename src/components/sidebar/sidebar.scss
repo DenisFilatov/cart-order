@@ -4,20 +4,24 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .co-s-header {
+  display: flex;
+  align-items: center;
   font-family: Poppins-Light, serif;
   font-size: 22px;
   text-transform: uppercase;
   background-color: #5fa01b;
   color: #ffffff;
-  padding: 27px;
+  padding-left: 27px;
+  height: 70px;
 }
 
 .co-s-body {
-  height: 100%;
+  height: calc(100% - 120px);
   background-color: #32495e;
   padding: 25px;
 }

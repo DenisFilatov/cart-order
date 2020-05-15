@@ -2,6 +2,17 @@
 }
 
 .co-app-sidebar_wrapper {
-  width: 100vw;
-  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+}
+
+.co-app-header_wrapper {
+  position: fixed;
+  top: 0;
+  left: 260px;
+  right: 0;
+  height: 70px;
 }

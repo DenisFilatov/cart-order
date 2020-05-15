@@ -1,0 +1,135 @@
+.co-h-main_component {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
+  height: calc(100% - 30px);
+  overflow: hidden;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.co-h-store_name {
+  display: flex;
+  align-items: center;
+  font-family: Poppins-Medium, serif;
+  margin-right: 15px;
+}
+
+.co-h-short_store_name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 29px;
+  height: 29px;
+  background-color: #feb42c;
+  color: #ffffff;
+  border-radius: 50%;
+  margin: 0 10px 0 15px;
+}
+
+.co-h-full_store_name {
+  font-size: 18px;
+  color: #555555;
+}
+
+.co-h-user {
+  display: flex;
+  align-items: center;
+}
+
+.co-h-notifications {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.co-h-notifications_indicator {
+  &:before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: -4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #65a424;
+  }
+}
+
+.co-h-vertical_line {
+  content: "";
+  width: 1px;
+  height: 28px;
+  background-color: #ebebf2;
+  margin: 0 20px;
+}
+
+.co-h-user_block {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.co-h-user_name {
+  font-family: Poppins-Regular, serif;
+  font-size: 13px;
+  color: #585858;
+  padding-right: 25px;
+  margin-right: 10px;
+}
+
+.co-h-user_avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.co-h-up_arrow {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 2px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #bcbcbc;
+    border-right: 2px solid #bcbcbc;
+    transform: rotate(135deg);
+  }
+}
+
+.co-h-down_arrow {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 2px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #bcbcbc;
+    border-right: 2px solid #bcbcbc;
+    transform: rotate(-45deg);
+  }
+}

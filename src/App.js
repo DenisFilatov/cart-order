@@ -1,11 +1,22 @@
 import React, { Component } from "react";
 import Sidebar from "./components/sidebar/sidebar";
+import Header from "./components/header/header";
 import "./App.scss";
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+  }
+
+  renderHeader() {
+    const notifications = ["Test"];
+    const user = { name: "John Doe", avatar_src: "images/header/avatar.png" };
+    return (
+      <div className="co-app-header_wrapper">
+        <Header store_name="Store Name" notifications={notifications} user={user} />
+      </div>
+    );
   }
 
   renderSidebar() {
@@ -39,6 +50,11 @@ export default class App extends Component {
   }
 
   render() {
-    return <div className="co-app-main_component">{this.renderSidebar()}</div>;
+    return (
+      <div className="co-app-main_component">
+        {this.renderSidebar()}
+        {this.renderHeader()}
+      </div>
+    );
   }
 }
