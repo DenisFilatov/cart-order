@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Sidebar from "./components/sidebar/sidebar";
 import Header from "./components/header/header";
+import ProductCategorySetup from "./components/product_category_setup/product_category_setup";
 import "./App.scss";
 
 export default class App extends Component {
@@ -49,12 +50,21 @@ export default class App extends Component {
     );
   }
 
-  render() {
+  renderContent() {
     return (
       <div className="co-app-main_component">
-        {this.renderSidebar()}
-        {this.renderHeader()}
+        <ProductCategorySetup />
       </div>
+    );
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        {this.renderHeader()}
+        {this.renderSidebar()}
+        {this.renderContent()}
+      </React.Fragment>
     );
   }
 }

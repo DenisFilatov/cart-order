@@ -1,0 +1,33 @@
+//========================= SelectBox =========================//
+.co-sb-main_container {
+  font-family: Poppins-Regular, serif;
+  position: relative;
+
+  select {
+    -webkit-appearance: none;
+    background-color: inherit;
+    color: #43425d;
+    padding: 15px 45px 15px 5px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #cfcfdd;
+    border-radius: 0;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #cfcfdd;
+    border-right: 2px solid #cfcfdd;
+    transform: rotate(135deg);
+  }
+}
+
+//========================= InputBox =========================//

@@ -1,4 +1,13 @@
 .co-app-main_component {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  bottom: 0;
+  left: 260px;
+  padding: 33px 77px;
+  background-color: #edf1f4;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .co-app-sidebar_wrapper {
