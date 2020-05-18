@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import SelectBox from "../common_components/select_box";
-import InputBox from "../common_components/input_box";
+import CustomSelector from "../common_components/custom_selector";
+import CustomInput from "../common_components/custom_input";
+import CustomButton from "../common_components/custom_button";
 import "./product_category_setup.scss";
 
 export default class ProductCategorySetup extends Component {
@@ -10,11 +11,35 @@ export default class ProductCategorySetup extends Component {
   }
 
   renderForm() {
-    const options = ["Category 1", "Category 2", "Category 3"].map((i) => ({ label: i, value: i }));
+    const categoryOptions = ["Category 1", "Category 2", "Category 3"].map((i) => ({ label: i, value: i }));
+    const subcategoryOptions = ["Subcategory 1", "Subcategory 2", "Subcategory 3"].map((i) => ({
+      label: i,
+      value: i,
+    }));
     return (
       <div className="co-pcs-form">
-        <div className="co-pcs-selectbox_wrapper">
-          <SelectBox options={options} />
+        <div className="co-pcs-form_row">
+          <div className="co-pcs-selector_wrapper">
+            <CustomSelector options={categoryOptions} placeholder="Category" />
+          </div>
+          <div className="co-pcs-selector_wrapper">
+            <CustomSelector options={subcategoryOptions} placeholder="Sub Category" />
+          </div>
+        </div>
+        <div className="co-pcs-form_row">
+          <div className="co-pcs-input_wrapper">
+            <CustomInput placeholder="New Category" />
+          </div>
+        </div>
+        <div className="co-pcs-form_row">
+          <div className="co-pcs-input_wrapper">
+            <CustomInput placeholder="Product Name" />
+          </div>
+          <div className="co-pcs-menu_block">
+            <div className="co-pcs-button_wrapper">
+              <CustomButton title="Save" />
+            </div>
+          </div>
         </div>
       </div>
     );

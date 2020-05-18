@@ -1,10 +1,11 @@
-//========================= SelectBox =========================//
-.co-sb-main_container {
-  font-family: Poppins-Regular, serif;
+//========================= CustomSelector =========================//
+.co-cs-main_container {
   position: relative;
 
   select {
     -webkit-appearance: none;
+    font-family: Poppins-Regular, serif;
+    font-size: 16px;
     background-color: inherit;
     color: #43425d;
     padding: 15px 45px 15px 5px;
@@ -12,7 +13,6 @@
     border: none;
     border-bottom: 1px solid #cfcfdd;
     border-radius: 0;
-    font-size: 16px;
     outline: none;
     cursor: pointer;
   }
@@ -20,7 +20,7 @@
   &:after {
     content: "";
     position: absolute;
-    top: 18px;
+    top: 23px;
     right: 18px;
     width: 6px;
     height: 6px;
@@ -30,4 +30,35 @@
   }
 }
 
-//========================= InputBox =========================//
+//========================= CustomInput =========================//
+.co-ci-main_container {
+  position: relative;
+
+  input {
+    width: calc(100% - 10px);
+    font-family: Poppins-Regular, serif;
+    font-size: 16px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #cfcfdd;
+    padding: 15px 5px;
+    outline: none;
+    color: #43425d;
+  }
+}
+
+//========================= CustomButton =========================//
+.co-cb-button {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  font-family: Poppins-SemiBold, serif;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5fa01b;
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 10px;
+  cursor: pointer;
+}

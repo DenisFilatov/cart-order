@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./common_components.scss";
 
-export default class SelectBox extends Component {
+export default class CustomSelector extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -19,7 +19,7 @@ export default class SelectBox extends Component {
   render() {
     const { value, placeholder, name, onChange } = this.props;
     return (
-      <div className="co-sb-main_container">
+      <div className="co-cs-main_container">
         <select value={value} name={name} onChange={(e) => onChange(e.target.value)}>
           <option value={undefined} hidden>
             {placeholder}
@@ -31,13 +31,13 @@ export default class SelectBox extends Component {
   }
 }
 
-SelectBox.defaultProps = {
+CustomSelector.defaultProps = {
   value: undefined,
   options: [],
   placeholder: "Select something...",
   onChange: () => console.log("On Change Select"),
 };
-SelectBox.propTypes = {
+CustomSelector.propTypes = {
   value: PropTypes.any,
   options: PropTypes.arrayOf(
     PropTypes.shape({

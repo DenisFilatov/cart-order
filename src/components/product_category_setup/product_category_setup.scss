@@ -17,6 +17,31 @@
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 
-.co-pcs-selectbox_wrapper {
+.co-pcs-form_row {
+  display: flex;
+  margin-bottom: 30px;
+
+  & > *:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.co-pcs-selector_wrapper {
+  width: 300px;
+}
+
+.co-pcs-input_wrapper {
+  width: 300px;
+}
+
+.co-pcs-button_wrapper {
+  width: 151px;
+  height: 44px;
+}
+
+.co-pcs-menu_block {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   width: 300px;
 }
